@@ -4,7 +4,6 @@ export default defineConfig({
   base: "./",
   plugins: [],
   build: {
-    outDir: '../dist',
     lib: {
       entry: './src/index.ts',
       name: 'BasicLitExample',
@@ -12,6 +11,7 @@ export default defineConfig({
       formats: ['es']
     },
     rollupOptions: {
+      input: './index.html',
       external: ['lit', 'lit/decorators.js', '@lit/context', '@lit/task'],
       output: {
         globals: {
