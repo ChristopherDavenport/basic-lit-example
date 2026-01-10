@@ -4,6 +4,7 @@ export default defineConfig({
   base: "./",
   plugins: [],
   build: {
+    outDir: '../dist',
     lib: {
       entry: './src/index.ts',
       name: 'BasicLitExample',
