@@ -1,13 +1,42 @@
 {
   "name": "basic-lit-example",
-  "private": true,
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Basic example project using Lit with Vite",
   "type": "module",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist/**/*",
+    "README.md"
+  ],
+  "keywords": [
+    "lit",
+    "web-components",
+    "typescript",
+    "library",
+    "proof of concept"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChristopherDavenport/basic-lit-example.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ChristopherDavenport/basic-lit-example/issues"
+  },
+  "homepage": "https://github.com/ChristopherDavenport/basic-lit-example",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
-    "preview": "vite preview"
+    "build:types": "tsc --declaration --emitDeclarationOnly --outDir dist",
+    "preview": "vite preview",
+    "prepublishOnly": "npm run build"
   },
   "dependencies": {
     "@lit/context": "^1.1.3",
