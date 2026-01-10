@@ -1,6 +1,6 @@
 {
   "name": "basic-lit-example",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "Basic example project using Lit with Vite",
   "type": "module",
   "main": "./dist/index.js",
